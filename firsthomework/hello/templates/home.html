@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}What do I wear today?{% endblock %}</title>
+    {% load static %}
+    <link rel=”stylesheet” type="text/css" href="{% static 'hello/style.css' %}">
+    <style>
+        .main-wrap{
+            display: grid;
+            width: 90%;
+            margin: auto;
+        }
+        .abcd-wrap{
+            display: grid;
+            width: 90%;
+            margin:auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <div  class="main">
+        <div class="main-wrap">
+            <h1 style="color: blue">오늘 뭐입을지 고민되는데?</h1>
+            <h5>제작의도 : 날씨에 따라 옷을 뭐입을지 고민하는 사람들이 많아지고 있고,
+                또한 심각한사람은 그날 옷을 뭐입을지를 고민하는데 적어도 40-50분 정도 소요되기도 합니다. 
+                이런 고민등을 사람들끼리 커뮤니티를 통해 줄여나가는게 목표입니다.</h5>
+            <h5>
+                구상: 그날 지역의 날씨가 표시되고 사람들끼리의 커뮤니티 게시판에 오늘은 대충 날씨는 어떠하고 이렇게 입을것이다 라는등의 글을 보고 오늘 옷을 어떻게 입을지 참고하거나
+                날씨에 맞게끔 옷을 무엇을 입을지 선택 폭을 줄여주어 사용자의 성별에따라 추천도 해주는 식으로 생각해보았습니다.
+            </h5>
+            <h5>
+                risk: 커뮤니티가 활성화 되어야 하고 활성화가 안될시에는 
+                날씨에 맞게끔 옷의 선택폭을 줄여주는 역할밖에 수행하지못함
+            </h5>
+        </div>
+    </div>
+    
+    <div class="abcd">
+        <div class="abcd-wrap">
+            <h3 style="color:coral">아래에 좋은 추가적인 의견이 있으면 적어주세요!</h3>
+            <form action="{% url 'submit' %}">
+                <textarea name="content" id="" cols="50" rows="30"></textarea>
+                <input type="submit" value="폼 제출">
+            </form> 
+        </div>
+
+    </div>
+    
+</body>
+</html>
