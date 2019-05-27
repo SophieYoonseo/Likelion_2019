@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wordcount-home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        .main-wrap{
+            display: grid;
+            width: 95%;
+            padding-top:10px;
+            padding-bottom:10px;
+            margin:0 auto;
+            margin-bottom:20px;
+            text-align:center;
+        }
+        #title{
+            
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .col-md{
+            display: grid;
+            width: 100%;
+            margin: auto;
+            margin-top:90px;
+            text-align:right;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="main-wrap">
+            <div id="title">
+                <h1 style="color :darkblue">안녕하세요! Wordcount home입니다!</h1>
+            </div>
+            <a href="{% url 'about' %}">about으로 가볼까요? </a>
+
+            <form action="{% url 'result' %}">  
+                <textarea name="fulltext" id="" cols="120" rows="20"></textarea>
+                <input type="submit" value="제출하기">
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md">
+        <h5>Made by.YoonseoKim</h5>
+        <ul class="list-unstyled text-small">
+          <li>#전북대 #멋쟁이사자처럼7기 #LIKELION #컴퓨터공학부 #김윤서</li>
+          <li>블로그: https://blog.naver.com/withyoom_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a href="https://blog.naver.com/withyoom_" target="_new">https://blog.naver.com/withyoom_</a></li>
+          <li>github: https://github.com/SophieYoonseo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a href="https://github.com/SophieYoonseo" target="_new">https://github.com/SophieYoonseo</a></li>
+      </ul>
+  </div>
+
+</body>
+</html>

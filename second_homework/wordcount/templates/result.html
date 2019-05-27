@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wordcount-result</title>
+    <style>
+        .abcd-wrap{
+            display: grid;
+            width: 90%;
+            margin: auto;
+            padding-bottom:70px;
+            text-align:center;
+        }
+        #r_title{
+            text-align:center;
+            padding-bottom:40px;
+        }
+        #linklink{
+            text-align:right;
+            padding-bottom:40px;
+        }
+        .gogo-wrap{
+            display: grid;
+            width: 90%;
+            margin: auto;
+        }       
+    </style>
+</head>
+<body>
+    <div class="abcd">
+        <div class="abcd-wrap">
+            <div id="r_title">
+                <h1 style="color:darkblue"> Here is Wordcount Result.</h1>
+            </div>
+            <div id="linklink">
+                <a href="{% url 'home' %}">Comeback Home</a>
+                <h4>위 링크를 클릭하면 home으로 돌아갑니당!</h4>
+            </div>    
+                <h3>입력한 글자는</h3>     {{text}}     <h3>입니다.</h3>
+        </div>
+    </div>
+    
+    <div class="gogo">
+        <div class="gogo-wrap">
+            <!-- 위에건 printf 하는거임  -->
+            <h3>총 단어 수는? </h3>
+            {{total}}
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3>각 단어별 개수는?</h3>
+            {% for word, count in full %}
+            {{word}} : {{count}}
+            <br>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</body>
+</html>

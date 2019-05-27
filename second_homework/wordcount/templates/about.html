@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wordcount - about </title>
+    <style>
+        .about-wrap{
+            display: grid;
+            width: 95%;
+            margin: auto;
+            padding-bottom:70px;
+            text-align:center;
+        }
+
+        .about-ex{
+            display: grid;
+            width: 95%;
+            margin: auto;
+            padding-bottom:70px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="about">
+        <div class="about-wrap">
+            <h1 style="color:darkblue">Here is wordcount about.</h1>
+            <br>
+            <a href="{% url 'home' %}">Comeback Home</a>
+            <p>위의 링크를 누르면 home으로 돌아갈 수 있습니다.</p>
+        </div>
+
+        <div class="about-ex">
+            <h3>이 프로그램은 입력한 단어 및 글자들의 개수를 세어주는 프로그램입니다!</h3>
+        </div>
+    </div>
+
+    
+</body>
+</html>
